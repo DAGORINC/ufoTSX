@@ -1,0 +1,126 @@
+@import '../../variables.scss';
+
+.general {
+    padding: 3vh 10vw;
+    display: flex;
+    justify-content: center;
+}
+
+.contact {
+    font-size: xx-large;
+    margin-left: 5vw;
+}
+
+.cityName {
+    font-size: x-large;
+}
+
+.contactContainer {
+    width: 70vw;
+}
+
+.adres {
+    padding-top: 30px;
+    padding-right: 2.5vw;
+}
+
+.adresPart {
+    color: black;
+    font-weight: lighter;
+}
+
+.shop1 {
+    font-size: large;
+    width: 50%;
+    border-right: 1px solid lightgray;
+}
+
+.shop2 {
+    font-size: large;
+    width: 50%;
+    padding-left: 2.5vw;
+}
+
+.shopContainer {
+    display: flex;
+}
+
+.navigationIcon {
+    height: 50px;
+}
+
+.cityNameDiv {
+    transition: all 0.5s;
+    padding: 0 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1000px;
+    display: flex;
+    border: 3px solid $ufoBlue;
+    color: $ufoBlue;
+    background-color: $ufoYellow;
+    user-select: none;
+}
+
+.cityNameDiv:hover {
+    background-color: $ufoYellowHover;
+}
+
+.cityNavigationLinkDiv {
+    display: flex;
+    justify-content: center;
+
+}
+
+.pdfLink{
+    color: $ufoBlue;
+    cursor: pointer;
+    background-color: $ufoYellow;
+    border: 2px solid $ufoBlue;
+    padding: 10px 15px;
+    border-radius: 70px;
+    transition: all 0.5s ease-out;
+}
+
+.pdfLink:hover {
+    background-color: $ufoYellowHover;
+}
+
+.pdfIconContainer{
+    font-weight: lighter;
+    margin-top: 25px;
+}
+
+.pdfIcon{
+    padding-left: 5px;
+}
+
+@media screen and (max-width: 870px) {
+
+    .general {
+        padding: 3vh 5vw;
+    }
+
+    .contactContainer {
+        width: 100%;
+    }
+
+    .shopContainer {
+        display: block;
+    }
+
+    .shop1 {
+        width: 100%;
+        border: none;
+    }
+
+    .shop2 {
+        width: 100%;
+        padding-top: 30px;
+    }
+
+    .pdfLink {
+        display: flex;
+        justify-content: center;
+    }
+}

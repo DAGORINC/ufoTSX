@@ -1,0 +1,78 @@
+@import '../../../../variables.scss';
+
+.general {
+    width: 100vw;
+    max-width: 100%;
+    margin-top: 50px;
+    bottom: 0;
+    overflow: hidden;
+    font-size: 0.8rem;
+}
+
+.copyrightsContainer {
+    font-weight: lighter;
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    background-color: $ufoBlue;
+    padding: 30px;
+}
+
+.myEmail {
+    color: white;
+    text-align: center;
+    margin-left: 5px;
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 50px 0;
+}
+
+.shop{
+    width: 400px;
+    background-color: white;
+    padding: 15px 30px;
+    border-top: 5px solid lightgray;
+}
+
+.telephoneIcon {
+    height: 30px;
+    margin-right: 10px;
+}
+
+.mailIcon {
+    height: 30px;
+    margin-right: 10px;
+}
+
+.navigationIcon {
+    height: 30px;
+    margin-right: 10px;
+}
+
+.adresContainer {
+    display: flex;
+    align-items: center;
+    margin: 12px 0;
+}
+
+.adresPart {
+    color: black;
+    font-size: large;
+    font-weight: lighter;
+}
+
+.copyrightsBottomContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 534px) {
+    .copyrightsBottomContainer{
+        text-align: center;
+    }
+}

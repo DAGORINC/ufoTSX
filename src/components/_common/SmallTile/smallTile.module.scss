@@ -1,0 +1,51 @@
+@import '../../../variables.scss';
+
+.general {
+    background-color: white;
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    min-width: 16vw;
+    margin: 20px 10px;
+    transition: box-shadow 0.5s;
+    cursor: grab;
+}
+
+.image {
+    width: 90%;
+    aspect-ratio: 16/9;
+    border-radius: 4px;
+	object-fit: contain;
+    margin-top: 2px;
+    user-select: none;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.name {
+    display: flex;
+    justify-content: center;
+    font-size: x-large;
+    align-items: flex-end;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+    transition: color 0.5s;
+    user-select: none;
+}
+
+.link:hover {
+    color: $activeLink;
+}
+
+.general:hover {
+    box-shadow: $shadow2;
+}

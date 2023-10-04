@@ -1,0 +1,48 @@
+.producers{
+    display: flex;
+    justify-content: center;
+    user-select: none;
+    cursor: pointer;
+    padding: 1%;
+}
+
+.producers:hover{
+    background-color: lightblue;
+}
+
+.buttonContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.producersData {
+    border-bottom: 1px solid lightgrey;
+}
+
+.addButton{
+    margin: 5px;
+    border: 1px solid green;
+    padding: 20px;
+    font-size: 15px;
+    background-color: white;
+    border-radius: 5px;
+    color: green;
+    transition: all 0.5s;
+}
+
+.addButton:hover{
+    cursor: pointer;
+    background-color: greenyellow;
+}
+
+.formContainer{
+    background-color: lightyellow;
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.input{
+    margin-left: 15px;
+}

@@ -1,0 +1,51 @@
+.general {
+    margin-top: 80px;
+}
+
+.mapsContainer{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.mapContainer {
+    width: 45vw;
+    display: flex;
+    margin-top: 20px;
+}
+
+
+.map {
+    width: 100%;
+    height: 40vw;
+    min-height: 50vh;
+    max-height: 90vh;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.text{
+    text-align: center;
+}
+
+@media screen and (max-width: 750px){
+
+    .mapsContainer{
+        display: block;
+    }
+
+    .mapContainer{
+        width: 100vw;
+        height: 80vw;
+        margin-bottom: 100px;
+    }
+    
+    .map{
+        min-height: none;
+        max-height: none;
+        height: 100%;
+    }
+
+}

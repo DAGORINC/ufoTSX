@@ -1,0 +1,52 @@
+.general{
+    margin-top: 2%;
+    min-height: 120px;
+    user-select: none;
+}
+
+.image{
+    height: 60px;
+}
+
+.infoWithImage{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    vertical-align: middle;
+}
+
+
+.text2{
+    font-size: 60px;
+}
+
+.text{
+    font-size: 15px;
+    color: gray;
+    padding-right: 10px;
+}
+
+.infoContainer{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+@media screen and (max-width: 870px){
+
+    .infoContainer{
+        flex-wrap: wrap;
+        margin-top: 30px;
+    }
+
+    .text{
+        text-align: center;
+        flex-wrap: wrap;
+    }
+
+    .infoWithImage, .infoWithoutImage {
+        width: 50vw;
+        margin-top: 20px;
+    }
+
+}

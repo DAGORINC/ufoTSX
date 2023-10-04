@@ -1,0 +1,97 @@
+.general{
+    border-top: 3px solid grey;
+}
+
+.general:hover{
+    background-color: rgb(235, 235, 235);
+    box-shadow: 0px 0px 5px 1px rgba(66, 68, 90, 1);
+}
+
+.firstContainer {
+    display: flex;
+}
+
+.partList {
+    display: flex;
+}
+
+.name{
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    min-width: 400px;
+    width: 33vw;
+    height: 100%;
+    border-right: 1px solid lightgray;
+}
+
+.editButton, .deleteButton {
+    margin: 0 20px;
+}
+
+.showElse {
+    border-top: 1px solid lightgray;
+    display: flex;
+}
+
+.details{
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    min-width: 400px;
+    width: 33vw;
+    border-bottom: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+    padding-left: 5px;
+    padding-right: 5px;
+
+}
+
+.showElseText {
+    border-bottom: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+}
+
+.image{
+    height: 200px;
+}
+
+.optionName{
+    min-width: 120px;
+}
+
+.premiseTag{
+    margin: 10px 0 0 0px;
+}
+
+.categoryNameContainer {
+    margin-right: 20px;
+    max-width: 100%;
+    font-weight: bold;
+}
+
+.descriptionNameContainer {
+    margin-left: 40px;
+    margin-right: 20px;
+    max-width: 100%;
+    font-weight: bold;
+}
+
+.categoryAndDescriptionExpanderContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.inputDescription{
+    width: 100%;
+    min-height: 30vh;
+    font-size: 15px;
+}
+
+.description{
+    padding: 70px;
+    padding-top: 20px;
+    font-size: 15px;
+    white-space: pre-wrap;
+}

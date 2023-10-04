@@ -1,0 +1,101 @@
+@import '../../../../../../variables.scss';
+
+.listPart {
+    list-style: none;
+    background-color: rgba(211, 211, 211, 0.203);
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition:
+        font-weight 0.2s,
+        color 0.5s,
+        max-height 3s,
+        padding 0.5s,
+        opacity 0.1s;
+}
+
+.listPartOpen {
+    max-height: 500px;
+    padding: 5px;
+    padding-left: 20px;
+    border-top: 1px solid rgba(128, 128, 128, 0.189);
+    opacity: 1;
+}
+
+.listPartClosed {
+    border-color: rgba(128, 128, 128, 0.189);
+    max-height: 0px;
+    transition:
+        font-weight 0.2s,
+        color 0.5s,
+        max-height 0.2s,
+        padding 0.3s,
+        opacity 0.1s;
+    opacity: 0;
+}
+
+.listPart:hover {
+    color: $activeLink;
+}
+
+.categoryPart {
+    border-bottom: 1px solid rgba(128, 128, 128, 0.189);
+    user-select: none;
+}
+
+.topListGeneral {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.topListContainer {
+    min-height: 31px;
+    width: 100%;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bottomList {
+    padding-left: 0px;
+    transition: all 1.2s;
+    overflow: hidden;
+}
+
+.categoryName {
+    color: black;
+    transition: color 0.5s, font-weight 0.2s;
+}
+
+.categoryName:hover {
+    color: $activeLink;
+    cursor: pointer;
+}
+
+.arrowDown,
+.arrowUp {
+    border: 4px solid rgba(255, 255, 0, 0);
+    transition: all 0.5s;
+    border-radius: 50px;
+    padding: 0 5px;
+}
+
+.arrowDown:hover {
+    background-color: rgba(128, 128, 128, 0.189);
+    cursor: pointer;
+}
+
+.arrowUp:hover {
+    background-color: rgba(128, 128, 128, 0.189);
+    cursor: pointer;
+}
+
+.arrowUp {
+    transform: rotate(180deg);
+}
+
+.selectedCategory {
+    font-weight: 700;
+    color: $activeLink;
+}

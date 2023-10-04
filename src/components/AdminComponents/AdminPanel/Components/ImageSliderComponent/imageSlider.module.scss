@@ -1,0 +1,51 @@
+@import '../../../../../variables.scss';
+
+.imageSliderContainer {
+    display: flex;
+    justify-content: center;
+    user-select: none;
+    cursor: pointer;
+    padding: 1%;
+}
+
+.imageSliderContainer:hover {
+    background-color: lightblue;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.addButton{
+    margin: 5px;
+    border: 1px solid green;
+    padding: 20px;
+    font-size: 15px;
+    background-color: white;
+    border-radius: 5px;
+    color: green;
+    transition: all 0.5s;
+}
+
+.addButton:hover{
+    cursor: pointer;
+    background-color: greenyellow;
+}
+
+.formContainer {
+    background-color: lightyellow;
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.imagesSlider {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+    align-content: flex-start;
+}

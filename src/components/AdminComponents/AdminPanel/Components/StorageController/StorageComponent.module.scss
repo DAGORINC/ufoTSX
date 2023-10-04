@@ -1,0 +1,11 @@
+.downloadStorageLink {
+    display: flex;
+    justify-content: center;
+    user-select: none;
+    cursor: pointer;
+    padding: 1%;
+}
+
+.downloadStorageLink:hover{
+    background-color: lightblue;
+}

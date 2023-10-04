@@ -1,0 +1,61 @@
+@import '../../../variables.scss';
+
+.container {
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+.tile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 95vw;
+    min-width: 27vw;
+    width: 450px;
+    margin: 5px;
+    aspect-ratio: 16/9;
+    background-size: cover;
+    background-position: center;
+    cursor: default;
+    transition: transform 0.2s, border-radius 0.8s;
+    user-select: none;
+}
+
+.text {
+    font-size: large;
+    background-color: rgba(255, 255, 255, 0.815);
+    padding: 20px;
+    border-radius: 3px;
+    color: black;
+    transition: color 0.5s;
+    user-select: none;
+}
+
+.tile:hover {
+    border-radius: 0px;
+    transform: scale(1.01);
+}
+
+.text:hover {
+    transition: color 0.2s;
+    color: $activeLink;
+}
+
+@media screen and (max-width: 550px) {
+
+    .tile {
+        max-height: 60vh;
+        max-width: 100vw;
+        border-radius: 0;
+        margin: 5px 0;
+        padding: 0;
+        aspect-ratio: 16/9;
+    }
+
+    .tile:hover {
+        transform: none;
+    }
+}
