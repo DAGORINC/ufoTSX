@@ -31,6 +31,7 @@ const Furniture = () => {
 
     const [producersData, setProducersData] = useState<IProducer[] | null>(null);
     const [collectionsData, setCollectionsData] = useState<ICollection[] | null>([]);
+    const [collectionsToDisplay, setCollectionsToDisplay] = useState<ICollection[] | null>(null)
 
     const [producerFilter, setProducerFilter] = useState<string | null>(null);
     const [collectionFilter, setCollectionFilter] = useState<string | null>(null);
@@ -145,8 +146,8 @@ const Furniture = () => {
         document.documentElement.scrollHeight - window.innerHeight <= window.scrollY + 1000 && setShowPerPage(showPerPage + 1);
     }
 
-
     window.addEventListener('scroll', showPerPageHandler)
+
 
     const getAllProducers = async () => {
         const res = await producersController.getAllProducers();
@@ -162,6 +163,7 @@ const Furniture = () => {
         const producerId = e.target.value;
         setProducerFilter(producerId);
         changeUrlParams('producerId', producerId);
+        setCollectionFilter('')
     }
 
     const setCollectionFilterHandler = (e: any) => {
@@ -217,6 +219,13 @@ const Furniture = () => {
         window.history.pushState(null, '', url.toString());
     }
 
+    const setCollectionsToDisplayHandler = () => {
+        if (!collectionsData) return
+        const collections = [...collectionsData]
+        const collectionsToDisplay = collections.filter(x => x.producer === producerFilter)
+        setCollectionsToDisplay (collectionsToDisplay);
+    }
+
     useEffect(() => {
         getAllFurniture();
     }, [])
@@ -229,6 +238,7 @@ const Furniture = () => {
 
     useEffect(() => {
         allFurnituresData && search(allFurnituresData);
+        setCollectionsToDisplayHandler()
     }, [producerFilter, collectionFilter, premiseFilter, allFurnituresData, categoryFilter])
 
     return (
@@ -309,13 +319,14 @@ const Furniture = () => {
                         className={styles.select}
                         value={collectionFilter || ''}
                         onChange={setCollectionFilterHandler}
+                        disabled={(!producerFilter || collectionsToDisplay?.length === 0) && true}
                     >
                         <option value='' >Dowolna kolekcja</option>
                         {
-                            !collectionsData || collectionsData.length === 0 || !Array.isArray(collectionsData) ? (
+                            !collectionsToDisplay || collectionsToDisplay.length === 0 || !Array.isArray(collectionsToDisplay) ? (
                                 null
                             ) : (
-                                collectionsData.map((collection, index) => {
+                                collectionsToDisplay.map((collection, index) => {
                                     return (
                                         <option
                                             className={styles.sortOption}

@@ -28,12 +28,27 @@ export default function Router() {
                     routes.map((route, index) => (
                         <Route
                             path={route.url}
-                            element={<CurrentLayout Component={route.component} hasStandardLayout={route.hasStandardLayout} title={route.name} />}
+                            element={
+                                <CurrentLayout
+                                    Component={route.component}
+                                    hasStandardLayout={route.hasStandardLayout}
+                                    title={route.name}
+                                />
+                            }
                             key={index}
                         />
                     ))
                 }
-                <Route path="*" element={<CurrentLayout Component={NotFoundPage} hasStandardLayout={true} title={'Nie znaleziono'}/>} />
+                <Route
+                    path="*"
+                    element={
+                        <CurrentLayout
+                            Component={NotFoundPage}
+                            hasStandardLayout={true}
+                            title={'Nie znaleziono'}
+                        />
+                    }
+                />
             </Routes>
         </BrowserRouter>
     )

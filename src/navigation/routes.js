@@ -9,7 +9,7 @@ import AdminPanel from '../components/AdminComponents/AdminPanel/AdminPanel';
 import PieceOfFurniture from '../pages/PieceOfFurniture/PieceOfFurniture';
 import SelectShowroomPage from '../pages/SelectShowroomPage/SelectShowroomPage';
 import SignIn from '../pages/SignIn/SignIn';
-// import Clarnet from '../components/AdminComponents/Clarnet/Clarnet';
+import Clarnet from '../components/AdminComponents/Clarnet/Clarnet';
 
 const routes = [
     {
@@ -84,12 +84,12 @@ const routes = [
         component: SignIn,
         hasStandardLayout: false,
     },
-    // {
-    //     name: 'Clarnet',
-    //     url: '/clarnet',
-    //     component: Clarnet,
-    //     hasStandardLayout: false,
-    // },
+    {
+        name: 'Clarnet',
+        url: '/clarnet',
+        component: Clarnet,
+        hasStandardLayout: false,
+    },
 ]
 
 export default routes;

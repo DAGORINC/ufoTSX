@@ -9,10 +9,7 @@ import logo from '../../../../assets/img/ufo.png';
 export default function Navigation() {
 
     const [position, setPosition] = useState('none')
-    // const [buttonsHeight, setButtonsHeight] = useState('')
     const [showMobileMenu, setShowMobileMenu] = useState('-114vh');
-
-    const navigate = useNavigate()
 
     const setShowroomHandler = (showroom: any) => {
         const confirm = window.confirm("Czy na pewno chcesz zmienić salon?")
@@ -24,12 +21,7 @@ export default function Navigation() {
 
     window.addEventListener('scroll', function () {
         const scroll = window.scrollY;
-        // const buttons = document.querySelector('#buttons');
-
         85 >= scroll ? setPosition('none') : setPosition('block');
-        // +buttonsHeight + 50 >= scroll ? setPosition('none') : setPosition('block');
-        // setButtonsHeight(buttons.offsetTop)
-
     })
 
 
@@ -47,9 +39,18 @@ export default function Navigation() {
 
     return (
         <>
-            <img className={styles.mobileMenuIcon} src={menuIcon} alt='menu' onClick={() => showMobileMenu === '-114vh' ? setShowMobileMenu('0') : setShowMobileMenu('-114vh')} />
+            <img
+                className={styles.mobileMenuIcon}
+                src={menuIcon}
+                alt='menu'
+                onClick={() => showMobileMenu === '-114vh' ? setShowMobileMenu('0') : setShowMobileMenu('-114vh')}
+            />
 
-            <div className={styles.mobileMenu} style={{ marginTop: showMobileMenu }}>
+            <div
+                className={styles.mobileMenu}
+                style={{ marginTop: showMobileMenu }}
+            >
+
                 <div>
                     {
                         localStorage.getItem('fakeTokenMinsk') || localStorage.getItem('fakeTokenPiaseczno')
@@ -146,13 +147,23 @@ export default function Navigation() {
 
             <div className={styles.general}>
 
-                <div className={styles.firstLane} id='firstLane'>
+                <div className={styles.firstLane} >
 
                     <div className={styles.logoContainer}>
-                        <Link to='/' className={styles.logoLink}><img className={styles.logo} alt='logo' src={logo} /></Link>
+                        <Link
+                            to='/'
+                            className={styles.logoLink}
+                        >
+                            <img
+                                className={styles.logo}
+                                alt='logo'
+                                src={logo}
+                            />
+                        </Link>
                     </div>
 
                     <div className={styles.selectShowroomContainer}>
+
                         {localStorage.getItem('selectedShowroom') === 'minsk' ? (
                             <div className={styles.selectedShowroomContainer}>
                                 <div className={styles.selectedShowroom}>
@@ -226,21 +237,13 @@ export default function Navigation() {
                         <div className={styles.cityLoginCheckContainer}>
                             <div>
                                 {
-                                    localStorage.getItem('fakeTokenMinsk') ? (
-                                        <>Jesteś zalogowany w UFO Mińsk</>
-                                    ) : (
-                                        <></>
-                                    )
+                                    localStorage.getItem('fakeTokenMinsk') && <>Jesteś zalogowany w UFO Mińsk</>
                                 }
                             </div>
 
                             <div>
                                 {
-                                    localStorage.getItem('fakeTokenPiaseczno') ? (
-                                        <>Jesteś zalogowany w UFO Piaseczno</>
-                                    ) : (
-                                        <></>
-                                    )
+                                    localStorage.getItem('fakeTokenPiaseczno') && <>Jesteś zalogowany w UFO Piaseczno</>
                                 }
                             </div>
                         </div>
@@ -249,7 +252,7 @@ export default function Navigation() {
                             {
                                 localStorage.getItem('fakeTokenMinsk') || localStorage.getItem('fakeTokenPiaseczno') ? (
                                     <div>
-                                        <button onClick={() => navigate('/adminpanel')} className={styles.adminPanelButton}>Panel Admina</button>
+                                        <Link to={'/adminpanel'} className={styles.adminPanelButton}>Panel Admina</Link>
                                         <button onClick={logoutHandler} className={styles.logoutButton}>WYLOGUJ</button>
                                     </div>
                                 ) : (
@@ -260,7 +263,7 @@ export default function Navigation() {
                     </div>
                 </div>
 
-                <div id='buttons' className={styles.buttons}>
+                <div className={styles.buttons}>
                     {
                         navigationButtons.map((button, index) => (
                             <Link to={button.url} key={index}>

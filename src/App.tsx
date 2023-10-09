@@ -7,7 +7,7 @@ function App() {
   const handleCookieAccept = () => {
     localStorage.setItem("ufoCookiePolicy", "true");
   };
-  
+
   return (
     <div className="generalView">
 
@@ -17,7 +17,11 @@ function App() {
         cookieName="ufoCookiePolicy"
         expires={150}
         onAccept={handleCookieAccept}
-        style={{ backgroundColor: 'white', borderTop: '1px solid lightgray', color: 'black' }}
+        style={{
+          backgroundColor: 'white',
+          borderTop: '1px solid lightgray',
+          color: 'black'
+        }}
       >
         Ta strona wykorzystuje pliki cookie.
         Używamy informacji zapisanych za pomocą plików cookies w celu zapewnienia maksymalnej wygody w korzystaniu z naszego serwisu oraz do prowadzenia statystyk.
